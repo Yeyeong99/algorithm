@@ -4,7 +4,7 @@ def ants_visit_comb(ants_num, num, ants_visit):
     if len(ants_visit) == ants_num:
         # 시간 계산
         max_time = -999999999999999999
-        for i in range(len(ants_visit) - 1):
+        for i in range(len(ants_visit) - 1): # 개미 수 가 1이면 for문 안돌고 값 업데이트 안됨
             next_idx = ants_visit[i + 1] - 1
             ant_time = homes[next_idx] - homes[i]
             max_time = max(ant_time, max_time)
